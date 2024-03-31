@@ -4,7 +4,9 @@ function Home() {
 
     
   return (
-    <div className='container mx-auto'> 
+    <div className='container mx-auto'
+    name = "home "
+    > 
     <div className='grid lg:grid-cols-2 grid-cols-1 lg:mt-32 mt-20 px-10 mx-auto items-center'>
 <div className='mx-auto lg-py-0 py-6'>
 <h2 className='font-bold text-4xl  text-[#D9D9D9] '>
