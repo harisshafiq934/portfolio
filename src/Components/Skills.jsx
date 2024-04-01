@@ -3,8 +3,7 @@ import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
 import reactImage from "../assets/react.png";
-import nextjs from "../assets/nextjs.png";
-import graphql from "../assets/graphql.png";
+
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
 import Redux from "../assets/redux.png"
@@ -78,7 +77,7 @@ My Tech Stack
 <p className='text-[#A7A7A7] font-medium mt-3'> Technologies I’ve been working with recently</p>
     </div>
 
-    <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
+    <div className=" grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-8 text-center px-12 py-8">
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}

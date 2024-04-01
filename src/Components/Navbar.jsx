@@ -84,7 +84,7 @@ const NavBar = () => {
       {nav && (
         <div
           onClick={closeNav}
-          className="fixed top-0 left-0 w-full h-full bg-black  z-20"
+          className="fixed top-0 left-0 w-full h-full bg-black  z-100"
         >
           <ul className="flex flex-col justify-center items-center h-full">
             {links.map(({ id, link }) => (
