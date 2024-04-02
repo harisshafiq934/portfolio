@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+
 import Github from "../assets/github.svg"
 import LinkedIn from "../assets/linkedin.svg"
 const NavBar = () => {
@@ -71,8 +72,14 @@ const NavBar = () => {
         ))}
       </ul>
 <div className="lg:flex hidden items-center space-x-5 ">
+    <a href="https://github.com/harisshafiq934">
+    
     <img src={Github} alt="github" />
+    </a>
+    <a href="https://www.linkedin.com/in/harisshafiq934/">
+
     <img src={LinkedIn} alt="linkedin" />
+    </a>
 </div>
       <div
         onClick={toggleNav}
