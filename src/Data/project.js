@@ -3,45 +3,35 @@ import Restaurent from "../assets/portfolio/restaurent.png"
 import BlissFlight from "../assets/portfolio/blissflights.png"
 import Vsl from "../assets/portfolio/vslaynalyzer.png"
 import AfricanMoney from "../assets/portfolio/africanmoneyhustle.png"
-
-
+import React from "../assets/react.svg"
+import Mern from "../assets/mern.png"
 
 
 const experiences = [
     {
-      title: "Frontend Developer at MAAQ Services",
-      icon: "",
+      title: "Frontend Developer at Dzine Media",
+      icon: React,
       iconBg: "#383E56",
-      date: "December 2023 - Presnt",
+      date: "July 2023 - March 2024",
       points: [
         "Developing and maintaining web & app applications using JavaScript and other related technologies.",
-        "Took part in developing frontend as a Team member",
+        "• Developed reusable React components to achieve code reuse, consistency, and maintainability across projects",
         "Implementing responsive design and ensuring cross-browser compatibility.",
       ],
     },
     {
-      title: "Associate Software Engineer at BitBeaver",
-      icon: "",
+      title: "Mern Stack Trainee at LUMINOGICS",
+      icon: Mern,
       iconBg: "#383E56",
-      date: "July 2023 - October 2023",
+      date: "October 2022 - January 2023",
       points: [
-        "Developing and maintaining web applications using JavaScript and other related technologies.",
-        "Took part in developing frontend as a Team member",
+        "Developed and executed various practice projects (e.g., designed a web UI from a given theme design",
+    
         "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Learnt OOP deep concepts and Python for Back-end Development.",
+        "Learnt JavaScript and solved practice problems, Async, DOM Manipulation, Map/Filter",
       ],
-    },
-    {
-      title: "Frontend Developer at TechnoKloud",
-      icon: "",
-      iconBg: "#383E56",
-      date: "September 2022 - Present",
-      points: [
-        "Developing and maintaining web applications using JavaScript and other related technologies.",
-        "Collaborating with other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-      ],
-    },
+    }
+  
   ];
 
 

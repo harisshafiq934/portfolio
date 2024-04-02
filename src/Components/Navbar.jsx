@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
-import Github from "../assets/github.svg"
-import LinkedIn from "../assets/linkedin.svg"
+import Github from "../assets/github.svg";
+import LinkedIn from "../assets/linkedin.svg";
+
 const NavBar = () => {
   const [nav, setNav] = useState(false);
 
@@ -53,59 +54,54 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="containe mx-auto ">
-    <div className="flex justify-between items-center w-full h-20 px-8 text-white   ">
-      <div>
-        <h1 className="text-5xl font-signature ml-2">Haris</h1>
-      </div>
+    <div className="bg-black z-[100]">
+      <div className="container mx-auto">
+        <div className="flex justify-between items-center w-full py-3 text-white">
+          <div>
+            <h1 className="text-3xl md:text-5xl font-signature">Haris</h1>
+          </div>
 
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer capitalize font-semibold text-gray-200 hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
-<div className="lg:flex hidden items-center space-x-5 ">
-    <a href="https://github.com/harisshafiq934">
-    
-    <img src={Github} alt="github" />
-    </a>
-    <a href="https://www.linkedin.com/in/harisshafiq934/">
+          <div className="md:hidden">
+            {nav ? (
+              <FaTimes onClick={closeNav} size={30} className="text-gray-200 cursor-pointer" />
+            ) : (
+              <FaBars onClick={toggleNav} size={30} className="text-gray-200 cursor-pointer" />
+            )}
+          </div>
 
-    <img src={LinkedIn} alt="linkedin" />
-    </a>
-</div>
-      <div
-        onClick={toggleNav}
-        className="cursor-pointer pr-4 z-10 text-gray-200 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+          <ul className={`md:flex ${nav ? 'flex' : 'hidden'} md:space-x-5`}>
+            {links.map(({ id, link }) => (
+              <li
+                key={id}
+                className="px-4 cursor-pointer capitalize font-semibold text-gray-200 hover:scale-105 duration-200"
+              >
+                <Link to={link} smooth duration={500} onClick={closeNav}>
+                  {link}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <div className="hidden md:flex items-center space-x-5">
+            <a href="https://github.com/harisshafiq934">
+              <img src={Github} alt="github" />
+            </a>
+            <a href="https://www.linkedin.com/in/harisshafiq934/">
+              <img src={LinkedIn} alt="linkedin" />
+            </a>
+          </div>
+        </div>
       </div>
 
       {nav && (
-        <div
-          onClick={closeNav}
-          className="fixed top-0 left-0 w-full h-full bg-black  z-100"
-        >
+        <div className="fixed top-0 left-0 w-full h-full bg-black">
           <ul className="flex flex-col justify-center items-center h-full">
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className="px-4 cursor-pointer capitalize py-6 text-4xl text-gray-500"
+                className="px-4 cursor-pointer capitalize py-6 text-3xl text-gray-200"
               >
-                <Link
-                  onClick={closeNav}
-                  to={link}
-                  smooth
-                  duration={500}
-                  className="hover:text-gray-200"
-                >
+                <Link to={link} smooth duration={500} onClick={closeNav}>
                   {link}
                 </Link>
               </li>
@@ -113,7 +109,6 @@ const NavBar = () => {
           </ul>
         </div>
       )}
-    </div>
     </div>
   );
 };

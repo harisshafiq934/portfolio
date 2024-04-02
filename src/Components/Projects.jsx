@@ -7,6 +7,7 @@ import LinkIcon from "../assets/link.png"
 import {Tilt} from "react-tilt";
 import { motion } from "framer-motion";
 import { projects } from '../Data/project';
+import { styles } from '../styles';
 const ProjectCard = ({
     index,
     name,
@@ -23,7 +24,7 @@ const ProjectCard = ({
             scale: 1,
             speed: 450,
           }}
-          className='bg-black p-5 rounded-2xl sm:w-[360px] w-full'
+          className='bg-[#3334] p-5 rounded-2xl sm:w-[360px] w-full'
         >
           <div className='relative w-full h-[230px]'>
             <img
@@ -110,7 +111,7 @@ function Projects() {
     >
       <div className=" p-4 mx-auto  ">
         <div className="pb-8 text-center">
-          <p className="text-4xl font-bold inline ">
+          <p className={`${styles.sectionHeadText}`} >
           Projects
           </p>
           <p className="py-6">  Things I’ve built so far  </p>
