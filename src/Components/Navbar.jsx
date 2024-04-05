@@ -88,7 +88,7 @@ const NavBar = () => {
             </a>
             <a href="https://www.linkedin.com/in/harisshafiq934/">
               <img src={LinkedIn} alt="linkedin" />
-            </a>
+            </a>  
           </div>
         </div>
       </div>
