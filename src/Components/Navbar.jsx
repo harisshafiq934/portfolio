@@ -54,7 +54,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="bg-black z-[100]">
+    <div className="bg-black ">
       <div className="container mx-auto">
         <div className="flex justify-between items-center w-full py-3 text-white">
           <div>
@@ -69,7 +69,7 @@ const NavBar = () => {
             )}
           </div>
 
-          <ul className={`md:flex ${nav ? 'flex' : 'hidden'} md:space-x-5`}>
+          <ul className={`md:flex hidden ${nav ? 'flex' : 'hidden'} md:space-x-5`}>
             {links.map(({ id, link }) => (
               <li
                 key={id}
@@ -94,7 +94,7 @@ const NavBar = () => {
       </div>
 
       {nav && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black">
+        <div className=" bg-black">
           <ul className="flex flex-col justify-center items-center h-full">
             {links.map(({ id, link }) => (
               <li
