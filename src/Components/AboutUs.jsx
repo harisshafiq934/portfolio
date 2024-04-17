@@ -2,7 +2,7 @@ import React from 'react';
 
 function AboutUs() {
   return (
-    <div name="about" className="container mt-16">
+    <div name="about" className="container mt-16 mx-auto">
 
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="text-center flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full text-white">
