@@ -1,7 +1,7 @@
 import React from 'react'
 import Realstate from "../assets/portfolio/realestate.png"
 import Restaurent from "../assets/portfolio/restaurent.png"
-// import { SectionWrapper } from "../hoc";
+import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import LinkIcon from "../assets/link.png"
 import {Tilt} from "react-tilt";
@@ -110,12 +110,12 @@ function Projects() {
       className=" w-full text-white "
     >
       <div className=" p-4 mx-auto  ">
-        <div className="pb-8 text-center">
-          <p className={`${styles.sectionHeadText}`} >
+        <motion.div variants={textVariant()} className="pb-8 text-center">
+          <h2 className={`${styles.sectionHeadText}`} >
           Projects
-          </p>
+          </h2>
           <p className="py-6">  Things I’ve built so far  </p>
-        </div>
+        </motion.div>
 
         <div className='mt-2  grid lg:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 mx-auto gap-7'>
         {projects.map((project, index) => (
@@ -129,5 +129,4 @@ function Projects() {
     </div>
   )
 }
-
-export default Projects
+export default SectionWrapper(Projects, "");
