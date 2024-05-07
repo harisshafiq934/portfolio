@@ -109,7 +109,7 @@ function Projects() {
     
       className=" w-full text-white "
     >
-      <div className=" p-4 mx-auto  ">
+      <div className=" p-4 mx-auto  ">   
         <motion.div variants={textVariant()} className="pb-8 text-center">
           <h2 className={`${styles.sectionHeadText}`} >
           Projects
